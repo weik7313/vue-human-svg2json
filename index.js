@@ -23,10 +23,15 @@ function getFileTitle (fileName) {
   return fileName.slice(0, fileName.indexOf('.svg'));
 }
 
-function parseFile (file) {
+/**
+ * Parse file, get path node in svg xml, return paths
+ * @param  {String} fileName
+ * @return {Array}
+ */
+function parseFile (fileName) {
   let paths = [];
 
-  let html = fs.readFileSync(`svg/${file}`, 'utf8')
+  let html = fs.readFileSync(`svg/${fileName}`, 'utf8')
   let $ = cheerio.load(html)
   $('svg > path').each((index, element) => {
     let path = {};
@@ -37,6 +42,10 @@ function parseFile (file) {
   return paths;
 }
 
+/**
+ * Get icons json
+ * @return {Object}
+ */
 function getIconsJson () {
   let icons = {};
 
@@ -52,6 +61,10 @@ function getIconsJson () {
   return icons;
 }
 
+/**
+ * Write json to file
+ * @return {String}
+ */
 function writeFile () {
   let icons = getIconsJson();
   jsonfile.writeFileSync('dist/icons.json', icons, { spaces: 2 });
