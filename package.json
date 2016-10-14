@@ -1,0 +1,17 @@
+{
+  "name": "vue-human-svg2json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "jsonfile": "^2.4.0",
+    "lodash": "^4.16.4",
+    "svgfont2js": "^0.1.2"
+  }
+}
