@@ -1,10 +1,10 @@
 {
   "name": "vue-human-svg2json",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "node index.js"
+    "total": "node total.js",
+    "sperate": "node sperate.js"
   },
   "author": "",
   "license": "ISC",
